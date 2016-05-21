@@ -27,7 +27,7 @@ for iter = 1:num_iters
     temp0 = theta(1,1) - (alpha/m) * c(1,1);
     temp1 = theta(2,1) - (alpha/m) * c(1,2);
 
-    theta = [temp0; temp1]; %
+    theta = [temp0; temp1]; % update theta.
     
     % ============================================================
 

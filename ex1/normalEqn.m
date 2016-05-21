@@ -13,7 +13,10 @@ theta = zeros(size(X, 2), 1);
 % ---------------------- Sample Solution ----------------------
 
 
-
+   XT = X'; % compute transpose of X.
+   
+   theta = pinv(XT * X) * XT * y; % compute theta. 
+   
 
 % -------------------------------------------------------------
 

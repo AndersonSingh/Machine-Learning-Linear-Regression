@@ -21,10 +21,22 @@ for iter = 1:num_iters
 
 
 
+    h = X * theta; % compute hypothesis. 
+    
+    % computes summation for theta.
+    p = h - y;
+    c = p' * X;
 
+    
+    columns = size(X,2); % compute number of features.
+    temp = zeros(columns,1); % create a temp matrix for theta.
+    
+    % compute theta for this iteration.
+    for i=1:columns,
+        temp(i,1) = theta(i,1) - (alpha/m)  * c(1,i);
+    end;
 
-
-
+    theta = temp; % update theta.
 
 
     % ============================================================

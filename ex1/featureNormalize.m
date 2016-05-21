@@ -34,7 +34,7 @@ columns = size(X,2); % compute the total number of features in dataset.
 % for each feature, normal the data.
 for i=1:columns, 
     X_norm(:,i) = (X(:,i) - mu(1,i)) ./ sigma(1,i); 
-
+end
 
 
 % ============================================================
