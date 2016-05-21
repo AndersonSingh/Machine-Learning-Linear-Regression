@@ -26,16 +26,14 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
-sigma = std(X);
-mu = mean(X);
+sigma = std(X); % compute std deviation for all columns/features.
+mu = mean(X); % compute mean for all columns/features.
 
-columns = size(X,2); 
+columns = size(X,2); % compute the total number of features in dataset. 
 
+% for each feature, normal the data.
 for i=1:columns, 
     X_norm(:,i) = (X(:,i) - mu(1,i)) ./ sigma(1,i); 
-    
-
-disp(X_norm);
 
 
 
