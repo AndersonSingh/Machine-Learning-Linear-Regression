@@ -26,11 +26,16 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
+sigma = std(X);
+mu = mean(X);
 
+columns = size(X,2); 
 
+for i=1:columns, 
+    X_norm(:,i) = (X(:,i) - mu(1,i)) ./ sigma(1,i); 
+    
 
-
-
+disp(X_norm);
 
 
 
